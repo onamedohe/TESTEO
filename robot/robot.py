@@ -2,7 +2,7 @@ from iBott import RobotFlow
 from iBott.browser_activities.firefox import FirefoxBrowser
 from iBott.robot_activities.base import Bot
 from robot.flow import Nodes
-
+import time
 
 class Robot(Bot):
     """
@@ -68,6 +68,7 @@ class Robot(Bot):
 
         data = args[0]
         self.log.trace(f"Start process_transaction_data Method for element: {data}")
+        time.sleep(3)
         self.element_list.remove(data)
         return data
 
